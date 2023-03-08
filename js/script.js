@@ -64,14 +64,30 @@ let priceCalculate = decreamentCountNum * 1359;
 price.innerText = priceCalculate;
 })
 
-// total
+// cross btn first
+document.getElementById("phone-remove1").addEventListener("click", function(){
+  document.getElementById("phone-section1").style.display = "none";
+})
+// cross btn second
+document.getElementById("phone-remove2").addEventListener("click", function(){
+document.getElementById("phone-section2").style.display = "none";
+})
+
+// total price calculate
 document.getElementById("btn-checkout").addEventListener("mouseover",function(){
-  let Fistprice = +document.getElementById("cover-price").innerText;
-  let Secondprice = +document.getElementById("mobile-price").innerText;
+// carts
+let f1 = document.getElementById("phone-section1");
+let f2 = document.getElementById("phone-section2");
+
+// if first display is none
+if(f1.style.display == "none"){
+  console.log(3);
+  // we will show the second cart only
+  let Secondprice = +document.getElementById("cover-price").innerText;
 // subtotal
-  let subTotal = document.getElementById("sub-total");
-  let subTotalCalc = Fistprice + Secondprice;
-  subTotal.innerText = subTotalCalc;
+let subTotal = document.getElementById("sub-total");
+let subTotalCalc =  Secondprice;
+subTotal.innerText = subTotalCalc;
 // tax
 let tax = document.getElementById("tax");
 let vat = subTotalCalc * 0.15;
@@ -80,4 +96,63 @@ tax.innerText = vat;
 let total = document.getElementById("total");
 let totalCalc = subTotalCalc + vat;
 total.innerText = totalCalc;
+
+}
+
+// if second display is none
+if(f2.style.display == "none"){
+  // we will show the first cart only
+  let Fistprice = +document.getElementById("mobile-price").innerText;
+// subtotal
+let subTotal = document.getElementById("sub-total");
+let subTotalCalc =  Fistprice;
+subTotal.innerText = subTotalCalc;
+// tax
+let tax = document.getElementById("tax");
+let vat = subTotalCalc * 0.15;
+tax.innerText = vat;
+// total
+let total = document.getElementById("total");
+let totalCalc = subTotalCalc + vat;
+total.innerText = totalCalc;
+
+}
+
+// if both display is not none
+if(f2.style.display != "none" && f1.style.display != "none"){
+
+  let Fistprice = +document.getElementById("mobile-price").innerText;
+  let Secondprice = +document.getElementById("cover-price").innerText;
+  // subtotal
+  let subTotal = document.getElementById("sub-total");
+  let subTotalCalc = Fistprice + Secondprice;
+  subTotal.innerText = subTotalCalc;
+  // tax
+  let tax = document.getElementById("tax");
+  let vat = subTotalCalc * 0.15;
+  tax.innerText = vat;
+  // total
+  let total = document.getElementById("total");
+  let totalCalc = subTotalCalc + vat;
+  total.innerText = totalCalc;
+
+
+}
+
+// if both display is none
+if(f2.style.display == "none" && f1.style.display == "none"){
+  
+  // subtotal
+  let subTotal = document.getElementById("sub-total");
+  subTotal.innerText = "0";
+  // tax
+  let tax = document.getElementById("tax");
+  tax.innerText = "0";
+  // total
+  let total = document.getElementById("total");
+  total.innerText = "0";
+
+
+}
+
 })
