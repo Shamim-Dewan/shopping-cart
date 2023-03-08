@@ -19,7 +19,7 @@
          <div class="cart">
             <div class="col-md-12 col-lg-10 mx-auto">
                <div id="phone-section" class="cart-item">
-                  <!-- first cart -->
+<!-- first cart -->
                   <div class="row">
                      <div class="col-md-7 center-item">
                         <img src="images/product-1.png" alt="">
@@ -55,24 +55,25 @@
                <!-- btn minus -->
                            <button id="btn-Minus" class="btn btn-default"><i class="fas fa-minus"></i></button>
                <!-- display btn -->
-                           <input id="display-number" type="number" min="0" class="form-control text-center" value="0">
+                           <input id="display-number" type="number" min="0" class="form-control text-center" value="1">
                <!-- btn plus -->
                            <button id="btn-Plus" class="btn btn-default"><i class="fas fa-plus"></i></button>
 
                         </div>
-                        <h5>$<span id="cover-price">59</span> </h5>
+                        <h5>$<span id="cover-price">1359</span> </h5>
                         <button id="phone-cover-remove-button" class="btn btn-default"><img src="images/remove.png"
                               alt="" class="remove-item"></button>
                      </div>
                   </div>
                </div>
 
+               <!-- total -->
                <div class="cart-item">
                   <div class="row">
 
                      <div class="col-md-8">
                         <h5>Subtotal: </h5>
-                        <h5>Tax:</h5>
+                        <h5>VAT (15%):</h5>
                         <h5>Total:</h5>
                      </div>
 
@@ -86,7 +87,7 @@
                <div class="col-md-12 pt-4 pb-4">
                   <!-- Button trigger modal -->
                   <button type="button" class="btn btn-success check-out" data-bs-toggle="modal"
-                     data-bs-target="#exampleModal">
+                     data-bs-target="#exampleModal" id="btn-checkout">
                      Check Out
                   </button>
 
@@ -96,15 +97,16 @@
                      <div class="modal-dialog">
                         <div class="modal-content">
                            <div class="modal-header">
-                              <h1 class="modal-title fs-5" id="exampleModalLabel">Free Suggestion</h1>
+                              <h1 class="modal-title fs-5" id="exampleModalLabel">Confirmation</h1>
                               <button type="button" class="btn-close" data-bs-dismiss="modal"
                                  aria-label="Close"></button>
                            </div>
                            <div class="modal-body">
-                              Don't Buy Iphone and it's cover
+                              Are you sure to buy Iphone and it's cover
                            </div>
                            <div class="modal-footer">
-                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Yes</button>
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
 
                            </div>
                         </div>
